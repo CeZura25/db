@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Staff</title>
+        <link rel="stylesheet" href="css/database.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale1">
+        <script src=""></script>
+        <style>
+            body{
+                 min-height: 100vh;
+                 width: 100%;
+                 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bg11.png);
+                 background-position: center;
+                 background-size: cover;
+                 position: relative;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="tableQ">
+            <!--Header pic ng staff logo/icon sa left ng appropriate type-->
+            <!--Sa right logo ng school-->
+            <div class="header">
+
+                <font face = "Bedrock" size = "7">Staff Information</font>
+            </div>
+
+            <div class="topnav">
+                <a href="main.php"><font face = "Bedrock" size = "4">Home</font></a>
+                <a href="Students.html"><font face = "Bedrock" size = "4">Students</font></a>
+                <a href="Teachers.html"><font face = "Bedrock" size = "4">Teachers</font></a>
+                <a href="Staff.html"><font face = "Bedrock" size = "4">Staffs</font></a>
+            </div>
+
+            <form action="#">
+
+                <div class="data">
+
+                    <div class="solo">   
+                        <label for="fname"><font face = "Bedrock" size = "4">Name:</font></label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" size="35" required>
+                        <input type="text" id="mname" name="mname" placeholder="Middle Name" required>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                    </div> 
+                        
+                    <div class="one2">
+                        <label for="gender">Gender:</label>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label> 
+                    </div>    
+                    
+                    <div class="bday">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="0" max="100" required>
+                    </div>
+                    
+                    <div class="one2">
+                        <label for="bday">Birthday:</label>
+                        <input type="date" id="bday" name="bday" required>
+                    </div>    
+                        
+                    <div class="bday">    
+                        <label for="number">Contact Number:</label>
+                        <input type="tel" id="number" name="number" pattern="[0-9]{11}" placeholder="ex.09123456789" required>
+                    </div>
+
+                    <div class="one2">
+                        <!--Palagay nalang iba pang sched/gawin nyo nalang text box kung mahirap-->
+                        <label for="sched">Schedule</label>
+                        <select id="sched" name="sched">
+                            <option value="am">AM</option>
+                            <option value="pm">PM</option>
+                            <option value="none" selected>--none--</option>
+                        </select>
+                        <br>
+                        <!--Pwede mo gawing data list kung napapangitan ka/mas disrete ung position list-->
+                        <label for="others">Position:</label>
+                        <input type="text" id="others"  name="others" placeholder="Please specify" required>
+                    </div>
+
+                    <div class="bday">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="ex. emaailexample@gmail.com" size="40" required>
+                    </div>
+                    <div class="solo">
+                        <label for="address">Address</label><br>
+                        <input type="text" id="lot" name="lot" placeholder="Lot/House No." required>
+                        <input type="text" id="block" name="block" placeholder="Block" required>
+                        <input type="text" id="street" name="street" placeholder="Street" required>
+                        <input type="text" id="brgy" name="brgy" placeholder="Barangay" required>
+                        <input type="text" id="city" name="city" placeholder="City" required>
+                        <input type="text" id="prov" name="prov" placeholder="Province" required>
+                        <input type="text" id="coun" name="coun" placeholder="Country" required>
+                        <input type="text" id="post" name="post" placeholder="Postal/Zip Code" required>
+                    </div>
+
+                </div>
+
+
+                <div align="center">
+                    <!--Baguhin nyo nalang ung formaction or formtarget-->
+                    <!--Palagyan JS ung onclick pop up-->
+                    <button class="button button2" type="submit" formaction="#" onclick="">Create</button>
+                    <button class="button button2" type="submit" formaction="#">Update</button>
+                    <button class="button button1" type="submit" formaction="#">Remove</button>
+                    <button class="button button1"type="reset">Reset</button>
+                </div>
+                <br>
+                <center><a href="#" target="_blank" title="This will take you to the Staff Databases page. ">
+                    <u><i>See Databases</i></u> 
+                </a></center>
+            </form>
+        </div>
+    </body>
+</html>
